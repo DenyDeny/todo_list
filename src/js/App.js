@@ -1,6 +1,5 @@
-import template from './templates/test.pug';
-import './stylus/test.styl';
-// import './stylus/test.css';
+import template from '../templates/main.pug';
+import '../stylus/main.styl';
 import Vue from 'vue';
 
 export default () => {
