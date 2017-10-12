@@ -1,2 +1,2 @@
-System.import(`./js/App.js`)
+System.import(`./components/App.js`)
         .then(page => page.default())

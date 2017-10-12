@@ -1,5 +1,5 @@
-import template from '../templates/main.pug';
-import '../stylus/main.styl';
+import template from '../../templates/components/login.pug';
+import '../../stylus/main.styl';
 import Vue from 'vue';
 
 export default () => {
@@ -9,7 +9,7 @@ export default () => {
     name: 'app',
     data () {
       return {
-        msg: 'Welcome to Your Vue.js App'
+        msg: 'Войти'
       }
     }
   })
