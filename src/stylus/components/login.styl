@@ -1,0 +1,41 @@
+.container
+        height: 100vh
+        position: relative
+        .login
+            position absolute
+            left: 50%
+            top: 50%
+            transform: translateX(-50%) translateY(-50%)
+            .login-form
+                display: flex
+                flex-direction: column
+                align-items: center
+                input
+                    color: #2a2b30 
+                    box-sizing: border-box
+                    font-size: 1.6rem
+                    line-height: 2.5
+                    margin-bottom: 3rem
+                    border: none
+                    padding-left: 1.4rem
+                    width: 300px
+                    border: 1px solid #a3b1cd
+                    border-radius: 2px
+                    &::placeholder
+                        color: #566495
+                    &:hover
+                        border: solid 1px #749ae3
+                    &:focus
+                        border: 1px solid #749ae3
+                        outline: none
+                .btn-login
+                    background-color: #fff
+                    padding: 0
+                    margin: 0
+                    outline: none
+                    border: none
+                    width: 236px
+                    line-height: 2.4
+                    font-size: 2.5rem
+                    &:hover
+                        cursor pointer

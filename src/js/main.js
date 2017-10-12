@@ -1,2 +1,2 @@
-System.import(`./components/App.js`)
+System.import(`./components/Login.js`)
         .then(page => page.default())
