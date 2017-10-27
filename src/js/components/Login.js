@@ -2,6 +2,9 @@ import template from '../../templates/components/login.pug'
 import '../../stylus/main.styl'
 import Vue from 'vue'
 import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
 
 export default () => {
   return new Vue({
@@ -11,8 +14,18 @@ export default () => {
     data () {
       return {
         msg: 'Войти',
-        postBody: '',
-        errors: []
+        email: ''
+      }
+    },
+    methods: {
+
+      async findEmail() {
+        try {
+          await this.getEmail(this.email)
+          
+        } catch (e) {
+          
+        }
       }
     }
   })

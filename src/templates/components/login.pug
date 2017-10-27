@@ -1,11 +1,12 @@
 .container
   .login
-    form.login-form(action="POST")
+    form.login-form(action="POST" v-on:submit.prevent='findEmail()')
       input(
         type="text"
         name="login-input"
         autofocus
         placeholder="email"
+        v-model="email"
       )
+
       button.btn-login {{ msg }}
-    
