@@ -1,5 +1,6 @@
 import template from '../../templates/components/login.pug'
 import '../../stylus/main.styl'
+import Api from '../libs/api.js'
 import Vue from 'vue'
 
 export default () => {
@@ -10,14 +11,14 @@ export default () => {
     data () {
       return {
         msg: 'Войти',
-        email: ''
+        email: '',
+        api: new Api()
       }
     },
     methods: {
-
       async findEmail() {
         try {
-          await this.getEmail(this.email)
+          await this.api.findByEmail(this.email)
           
         } catch (e) {
             console.log(e)

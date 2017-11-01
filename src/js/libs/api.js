@@ -1,6 +1,7 @@
 import axios from 'axios'
 import config from './config'
-class Api {
+
+export default class Api {
     constructor() {
         this.axios = axios.create({
             baseURL: config.baseUrl,
