@@ -1,6 +1,7 @@
 import template from '../../templates/components/login.pug'
 import '../../stylus/main.styl'
 import Api from '../libs/api.js'
+import {actions} from 'vuex'
 import Vue from 'vue'
 
 export default () => {

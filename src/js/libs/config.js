@@ -3,7 +3,7 @@ export default {
     
     user: {
         findByEmail: {
-            url: "/find_by_email",
+            url: "/api/user/find_by_email",
             method: "post"
         },
 
