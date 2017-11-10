@@ -1,7 +1,9 @@
 import template from '../../templates/components/login.pug'
 import '../../stylus/main.styl'
+import Registr from './Registr'
 import Api from '../libs/api.js'
 import {actions} from 'vuex'
+import router from '../routes/auth'
 import Vue from 'vue'
 
 export default () => {
@@ -9,6 +11,10 @@ export default () => {
     el: '#app',
     template: template(),
     name: 'app',
+    router,
+    components: {
+      Registr
+    },
     data () {
       return {
         msg: 'Войти',
@@ -21,8 +27,9 @@ export default () => {
         try {
           await this.api.findByEmail(this.email)
           
+          
         } catch (e) {
-            console.log(e)
+            this.$router.push('/registr');
         }
       }
     }
